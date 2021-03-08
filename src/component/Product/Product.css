@@ -9,3 +9,13 @@
     color: rgb(28, 157, 238);
     
 }
+.mane-btn{
+    background-color: rgba(241, 199, 91, 0.993);
+    width: 200px;
+    height: 30px;
+    cursor: pointer;
+    border: 1px solid gray;
+    border-radius: 5px;
+ 
+
+}

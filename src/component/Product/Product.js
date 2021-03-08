@@ -1,9 +1,12 @@
 import React from 'react';
 import './Product.css';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faShoppingBasket } from '@fortawesome/free-solid-svg-icons';
+import { Link } from 'react-router-dom';
 
 
 const Product = (props) => {
-    console.log(props.product)
+    console.log(props);
     const {img, name, price, seller , shipping, stock, key, category} = props.product;
     return (
          <div className="product">
@@ -11,15 +14,15 @@ const Product = (props) => {
             <img src={img} alt=""/>
          </div>
          <div >
-          <h4 className="product-name">{name}</h4>
+          <h4 className="product-name"><Link to={"/product/" + key}> {name}</Link></h4> 
           <br/>
           <p>by: <small>{seller}</small></p>
           <br/>
-          <p>${price}</p>
+          <p>Price ${price}</p>
           <br/>
            <p>only {stock} left in stock - order soon</p>
 
-           <button>Add to Cart</button>
+          { props.showAddCard && <button className="mane-btn" onClick={() => props.handleAddProduct(props.product)}>  <FontAwesomeIcon icon={faShoppingBasket} />Add to Cart</button>}
          </div>
     
          </div>
