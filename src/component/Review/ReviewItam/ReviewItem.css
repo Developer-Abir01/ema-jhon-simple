@@ -1,0 +1,9 @@
+ .reviewItem{
+     border-bottom: 1px solid lightgrey;
+     margin-bottom: 5px;
+     padding-bottom: 5px;
+     padding-left: 200px;
+ }
+ .text{
+     text-decoration: none;
+ }

@@ -14,7 +14,7 @@ const Product = (props) => {
             <img src={img} alt=""/>
          </div>
          <div >
-          <h4 className="product-name"><Link to={"/product/" + key}> {name}</Link></h4> 
+          <h4 className="product-name"><Link className="text" to={"/product/" + key}> {name}</Link></h4> 
           <br/>
           <p>by: <small>{seller}</small></p>
           <br/>

@@ -30,6 +30,7 @@ const Carts = (props) => {
             <p><small>Shipping: {shipping}</small></p>
             <p>Tex + Vat: {(tex).toFixed(2)}</p>
             <h5>Total Price: $ {(totalPrice).toFixed(1) + shipping}</h5>
+            <br/>
              <Link to="/review">  <button className="mane-btn">Review Order</button></Link>
         </div>
     );
