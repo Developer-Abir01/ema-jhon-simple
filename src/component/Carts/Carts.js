@@ -1,12 +1,13 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+
 import './Carts.css'
 
 const Carts = (props) => {
     
      const cart = props.cart;
      console.log(cart)
-     const totalPrice = cart.reduce((total , prd) => total + prd.price , 0)
+     const totalPrice = cart.reduce((total , prd) => total + prd.price * prd.quantity, 0);
+     
      
 
      let shipping = 0;
@@ -31,7 +32,9 @@ const Carts = (props) => {
             <p>Tex + Vat: {(tex).toFixed(2)}</p>
             <h5>Total Price: $ {(totalPrice).toFixed(1) + shipping}</h5>
             <br/>
-             <Link to="/review">  <button className="mane-btn">Review Order</button></Link>
+             {
+                 props.children
+             }
         </div>
     );
 };

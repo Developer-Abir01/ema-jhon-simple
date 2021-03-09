@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import './ReviewItem.css'
 
 const ReviewItem = (props) => {
-   console.log(props);
+  //  console.log(props);
    const {name , quantity, price, key} = props.pd;
   //  const handleRemoveProduct = props.handleRemoveProduct;
  
